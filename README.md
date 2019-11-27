@@ -1,27 +1,30 @@
-# Githubusers
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.2.
+Github Users:
+This application will show you the GitHub Users list and there Repositories.
 
-## Development server
+Built With:
+Angular CLI,Visual Studio Code,Bootstrap
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Running the tests:
+Install Angular latest version and open in any code editors or IDE's then run by using the
+command ng Serve
 
-## Code scaffolding
+Development:
+In this application we used the GITHUB third party API's to getting the all github user information
+coming to designing path i just customized few styling paths and remaining paths are covered with Bootstrap library.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Functionalities:
 
-## Build
+Requested GITHUB Users using some github API by using angular http modules and observables
+Separately created one service file for any future extra functionality purpose.
+Later response details are storing in array and displaying in .html files.
+If Enduser clicks any GitHub user option i have separately triggered one function and those repositories values are displayed in popup.
+For search functionality just created ngModel two way binding concept then capturing searched term and searching user’s name.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Author
+Aitha SaiKumar
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

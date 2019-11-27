@@ -1,0 +1,37 @@
+<div class="header">
+     <img src="../../assets/github-developer-logo.svg" alt="GitHub Developers" class="headerlogo">
+</div>
+<div class="search">
+     <input type="text" placeholder="Search here" [(ngModel)]="login" (input)="Search()">
+</div>
+<div class="mainDiv">
+     <div class="card" style="width: 18rem;" *ngFor="let user of allUsersData">
+          <img src={{user.avatar_url}} class="card-img-top" alt="...">
+          <div class="card-body">
+               <h5 class="card-title">{{user.login}}</h5>
+               <p class="card-text"><b>GitLink:</b>: <a href={{user.html_url}} target="_black">{{user.html_url}}</a></p>
+               <button type="button" (click)="viewRepos(user.login)" class="btn btn-primary" data-toggle="modal"
+                    data-target="#myModal">
+                    Click to Repositories</button>
+          </div>
+     </div>
+     <div class="container">
+          <div class="modal" id="myModal">
+               <div class="modal-dialog">
+                    <div class="modal-content">
+                         <div class="modal-header">
+                              <h1 class="modal-title">Repositories List</h1>
+                              <button type="button" class="close" data-dismiss="modal">×</button>
+                         </div>
+                         <div class="modal-body">
+                              <ol>
+                                   <li *ngFor="let repose of reposData">{{repose.name}}</li>
+                              </ol>
+                              <div class="modal-footer">
+                                   <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
